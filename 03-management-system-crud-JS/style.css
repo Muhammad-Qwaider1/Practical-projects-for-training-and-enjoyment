@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-border-box;
+}
+
+body {
+    background-color: #F4EFE6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.crud {
+    width: 80%;
+    margin: auto;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    color: #2D5A27;
+}
+
+.inputs, .outputs {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #dbd6cd;
+    box-sizing: border-box;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+    transform: scale(1.01);
+    border: 1px solid #2D5A27;
+}
+
+.price {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.price input {
+    flex: 1;
+    min-width: 80px;
+}
+
+#total {
+    background-color: #a00d02;
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#total::before {
+    content: "Total: ";
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    background-color: #2D5A27;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 100px;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.01);
+    background-color: rgba(37, 75, 32, 0.86);
+    cursor: pointer;
+}
+
+.searchBY {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.searchBY button {
+    flex: 1;   
+}
+
+#deleteAll button {
+    background-color: #8a140a;
+    margin-bottom: 1rem;
+}
+
+#deleteAll button:hover {
+    background-color: #b31b0e;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    color: black;
+}
+
+th {
+    text-transform: uppercase;
+    background-color: #e3dccf;
+}
+
+button.update, button.delete {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+button.delete {
+    background-color: #8a140a;
+}
+
+button.delete:hover {
+    background-color: #b31b0e;
+}
+
+@media (max-width: 768px) {
+    .crud {
+        width: 95%;
+    }
+
+    .price {
+        flex-direction: column;
+    }
+
+    .price input {
+        width: 100%;
+    }
+
+    #total {
+        width: 100%;
+    }
+
+    .searchBY {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
